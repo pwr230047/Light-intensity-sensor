@@ -27,8 +27,8 @@ void TMER_init()
 
 volatile uint16_t ADCVal;
 
-ISR(ADC_vect){
- 	
+ISR(ADC_vect)
+{
 	TIFR1|=_BV(OCF1B);								//Zeruj flage przerwania timer1 compare match B
 	USART_sendchar(ADCH);
 	USART_sendchar(ADCL);
@@ -40,7 +40,6 @@ int main(void)
 	ADCInit();								//Inicjalizacja ADC
 	USART_init();							//Inicjalizacja USART
 	TMER_init();							//Inicjalizacja Timera
-	ADCSRA|=_BV(ADSC);						//Rozpocznij przetwarzanie ADC
 	
 	DDRD = _BV(PD2)|_BV(PD3)|_BV(PD4);		// Ustaw wyjscie DIODY RGB
 	PORTD = _BV(PD2)|_BV(PD3)|_BV(PD4);		// Ustaw piny na HIGH dla RGB
