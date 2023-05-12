@@ -1,6 +1,6 @@
 # Light-intensity-sensor
 ## Opis
-Dioda RGB zapala odpowiedni kolor dostosowany do wartości natężenia światła ooczenia  przy zastosowaniu fotorezystora.
+Dioda RGB zapala odpowiedni kolor dostosowany do wartości natężenia światła otoczenia  przy zastosowaniu fotorezystora.
 ## Wymagania
 - niskie natężenie - kolor niebieski,
 - średnie natężenie - kolor zielony,
